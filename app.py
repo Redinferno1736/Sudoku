@@ -33,15 +33,15 @@ while running:
     t_rect = t.get_rect(center=(screen.get_width() / 2, screen.get_height() / 2-20))
     screen.blit(t, t_rect)
 
-    easy_text = font1.render("Easy", True, "white")
+    easy_text = font1.render("Easy", True, "lightgreen")
     easy_rect = easy_text.get_rect(center=(screen.get_width() / 2, screen.get_height() / 2+60))
     screen.blit(easy_text, easy_rect)
 
-    medium_text = font1.render("Medium", True, "white")
+    medium_text = font1.render("Medium", True, "darkorange")
     medium_rect = medium_text.get_rect(center=(screen.get_width() / 2, screen.get_height() / 2+110))
     screen.blit(medium_text, medium_rect)
 
-    hard_text = font1.render("Hard", True, "white")
+    hard_text = font1.render("Hard", True, "firebrick")
     hard_rect = hard_text.get_rect(center=(screen.get_width() / 2, screen.get_height() / 2+160))
     screen.blit(hard_text, hard_rect)
 
