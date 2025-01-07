@@ -1,3 +1,6 @@
+# Description: This file contains the main code for the Sudoku game. It imports the required libraries and calls the functions from the functions.py file to run the game.
+# The game starts by displaying the title "Sudoku" and prompting the user to choose a difficulty level (easy, medium, or hard).
+# The user can select a difficulty level by clicking on the respective button.
 # Importing the required libraries
 import pygame
 import functions
@@ -51,19 +54,16 @@ while running:
 
         # Check if the mouse click is within the easy button
         if easy_rect.collidepoint(mouse_pos):
-            print("Easy button clicked")
             running=False
             functions.easy()
             
         # Check if the mouse click is within the medium button
         if medium_rect.collidepoint(mouse_pos):
-            print("Medium button clicked")
             running=False
             functions.medium()
             
         # Check if the mouse click is within the hard button
         if hard_rect.collidepoint(mouse_pos):
-            print("Hard button clicked")
             running=False
             functions.hard()
             

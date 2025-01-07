@@ -1,3 +1,6 @@
+# Description: This file contains the functions to solve a sudoku board using backtracking algorithm.
+# The solve function takes a 9x9 sudoku board as input and returns the solved board.
+# The check function checks if a number can be placed in a cell of the board.
 def check(row,col,board,num):
     #Checks entire row
     for x in range(9):
@@ -19,6 +22,7 @@ def check(row,col,board,num):
             
     return True
 
+#Function to fully solve the board
 def solve(board):
     for i in range(9):
         for j in range(9):
