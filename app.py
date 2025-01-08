@@ -55,17 +55,26 @@ while running:
         # Check if the mouse click is within the easy button
         if easy_rect.collidepoint(mouse_pos):
             running=False
-            functions.easy()
+            try:
+                functions.easy()
+            except:
+                print("Check Your Network Connection")
             
         # Check if the mouse click is within the medium button
         if medium_rect.collidepoint(mouse_pos):
             running=False
-            functions.medium()
+            try:
+                functions.medium()
+            except:
+                print("Check Your Network Connection")
             
         # Check if the mouse click is within the hard button
         if hard_rect.collidepoint(mouse_pos):
             running=False
-            functions.hard()
+            try:
+                functions.hard()
+            except:
+                print("Check Your Network Connection")
             
 
     # flip() the display to put your work on screen
