@@ -103,7 +103,7 @@ def display(board1,solution):
 
             # Check for keyboard events
             if event.type == pygame.KEYDOWN and selected_cell:
-                num = event.key - pygame.K_0
+                num = event.key-pygame.K_0
                 if 1 <= num <= 9:
                     y, x = selected_cell
 
@@ -143,6 +143,28 @@ def display(board1,solution):
                             s.blit(number, n1)
                             selected_cell = None
                         pygame.display.update()
+                else:
+                    y,x=selected_cell
+                    inc = font1.render("Invalid Input!!!!!", True, "red")
+                    in_rect = inc.get_rect(center=(s.get_width() / 2, 60))
+                    s.blit(inc, in_rect)
+                    pygame.display.update()
+                    # Delay for 3 seconds
+                    pygame.time.delay(1000)
+                    
+                    s.fill((0, 0, 0), in_rect)  
+                    selected_cell = None
+                    pygame.draw.rect(s, "black", (270 + 3.75 + 60 * y, 120 + 3.75 + 60 * x, 56, 56))
+
+                    if board1[x][y] != 0:
+                        if co[x][y]!=0:
+                            number = font1.render(str(co[x][y]), True, "dodgerblue")
+                        else:
+                            number = font1.render(str(board1[x][y]), True, "white")
+                        n1 = number.get_rect(center=(270 + 60 * y + 30, 120 + 60 * x + 30))
+                        s.blit(number, n1)
+                        selected_cell = None
+                    pygame.display.update()   
 
         # Check if the board is solved
         pygame.display.update()
